@@ -1,28 +1,26 @@
 Name:           yt-dlp
-Version:        2021.10.10
-Release:        0
+Version:        2021.10.22
+Release:        1
 Summary:        A tool for downloading from video sites for offline watching
-License:        CC-BY-SA-3.0 AND SUSE-Public-Domain
-Group:          Productivity/Networking/Web/Utilities
+License:        CC-BY-SA-3.0 and Unlicensed
+Group:          Productivity/Video/Networking/Web/Utilities
 URL:            https://github.com/yt-dlp/yt-dlp
-#Git-Clone:     https://github.com/yt-dlp/yt-dlp
-Source:         https://github.com/yt-dlp/yt-dlp/archive/%version.tar.gz#/%name-%version.tar.gz
-Source1:        %name.changes
-# Fix binary and man page paths in the Makefile -- Arachnos
-Patch0:         0001-Fix-Makefile.patch
+Source:         https://github.com/yt-dlp/yt-dlp/archive/%{version}/%{name}-%{version}.tar.gz
+
 BuildRequires:  git
-BuildRequires:  make >= 4
+BuildRequires:  make
 BuildRequires:  pandoc
-BuildRequires:  python3-devel
-BuildRequires:  python3-xml
+BuildRequires:  pkgconfig(python)
 BuildRequires:  zip
+
 Requires:       ffmpeg
-Requires:       python3
-Requires:       python3-mutagen
-Requires:       python3-pycryptodome
-Requires:       python3-websockets
-Requires:       python3-xml
-Suggests:       python3-keyring
+Requires:       python
+Requires:       python3dist(mutagen)
+Requires:       python3dist(pycryptodomex)
+Requires:       python3dist(pycryptodome)
+Requires:       python3dist(websockets)
+
+Recommends:       python3dist(keyring)
 BuildArch:      noarch
 
 %description
@@ -65,9 +63,8 @@ ZSH command line completion support for %name.
 %autosetup -p1
 
 %build
-rm -f yt-dlp
-PYTHON="%_bindir/python3" %make_build lazy-extractors
-PYTHON="%_bindir/python3" %make_build
+#rm -f yt-dlp
+%make_build
 
 %install
 %make_install PREFIX="%_prefix" MANDIR="%_mandir"
