@@ -10,7 +10,7 @@ Source:         https://github.com/yt-dlp/yt-dlp/archive/%{version}/%{name}-%{ve
 BuildRequires:  git
 BuildRequires:  make
 #BuildRequires:  pandoc
-BuildRequires:  python3dist(pypandoc)
+#BuildRequires:  python3dist(pypandoc)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  zip
 
