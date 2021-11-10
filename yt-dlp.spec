@@ -9,18 +9,26 @@ Source:         https://github.com/yt-dlp/yt-dlp/archive/%{version}/%{name}-%{ve
 
 BuildRequires:  git
 BuildRequires:  make
-BuildRequires:  pandoc
+#BuildRequires:  pandoc
+BuildRequires:  python3dist(pypandoc)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  zip
 
 Requires:       ffmpeg
 Requires:       python
+Requires:       atomicparsley
+Requires:       rtmpdump
+Requires:       mplayer
+Requires:       mpv
+# Not available yet in Cooker
+#Requires:       phantomjs
+# Deprecated but also not available in Cooker
+#Requires:       sponskrub
 Requires:       python3dist(mutagen)
 Requires:       python3dist(pycryptodomex)
 Requires:       python3dist(pycryptodome)
 Requires:       python3dist(websockets)
-
-Recommends:       python3dist(keyring)
+Requires:       python3dist(keyring)
 BuildArch:      noarch
 
 %description
