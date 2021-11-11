@@ -85,7 +85,7 @@ ZSH command line completion support for %name.
 %license LICENSE
 %doc README.txt
 %_bindir/%name
-%_mandir/man1/%name.1%{?ext_man}
+#_mandir/man1/%name.1%{?ext_man}
 
 %files bash-completion
 %_datadir/bash-completion/
