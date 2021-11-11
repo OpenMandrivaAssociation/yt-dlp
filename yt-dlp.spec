@@ -72,10 +72,12 @@ ZSH command line completion support for %name.
 
 %build
 #rm -f yt-dlp
-%make_build
+#make_build
+%py_build
 
 %install
-%make_install PREFIX="%_prefix" MANDIR="%_mandir"
+#make_install PREFIX="%_prefix" MANDIR="%_mandir"
+%py_install
 
 %files
 %license LICENSE
