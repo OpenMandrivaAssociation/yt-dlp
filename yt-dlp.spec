@@ -52,7 +52,7 @@ A youtube-dl fork with additional features and fixes.
 %package        bash-completion
 Summary:        Bash completion for %name
 Group:          System/Shells
-Requires:       bash-completion
+Recommends:       bash-completion
 Supplements:    packageand(%name:bash)
 BuildArch:      noarch
 
@@ -62,7 +62,7 @@ Bash command line completion support for %name.
 %package        fish-completion
 Summary:        Fish completion for %name
 Group:          System/Shells
-Requires:       fish
+Recommends:       fish
 Supplements:    packageand(%name:fish)
 BuildArch:      noarch
 
@@ -72,7 +72,7 @@ Fish command line completion support for %name.
 %package        zsh-completion
 Summary:        Zsh Completion for %name
 Group:          System/Shells
-Requires:       zsh
+Recommends:       zsh
 Supplements:    packageand(%name:zsh)
 BuildArch:      noarch
 
