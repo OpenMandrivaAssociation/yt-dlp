@@ -12,6 +12,8 @@ BuildRequires:  make
 #BuildRequires:  pandoc
 #BuildRequires:  python3dist(pypandoc)
 BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(setuptools)
+BuildRequires:  python3dist(pip)
 BuildRequires:  zip
 
 Requires:       ffmpeg
