@@ -1,3 +1,11 @@
+# Errata
+# Never use source from github. Use pypi instead. Source from GH require to compile pandoc.
+# Pandoc is not available in Cooker and resurrection of it is hard and cause importing and fixing a lot of heavy packages like ghc.
+# So let's skip it by use PyPi sources and force use py_build and py_install instead recommended by upstream makeinstall.
+
+# Package is a fork of youtube-dl but with more features and fixes, also looks like youtube-dl development stop in summer 2021.
+# But until some aplication still require youtube-dl, please don't replace it with yt-dlp or don't obsolete it.
+
 Name:           yt-dlp
 Version:        2021.11.10.1
 Release:        1
@@ -5,12 +13,8 @@ Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
 URL:            https://github.com/yt-dlp/yt-dlp
-Source:         https://github.com/yt-dlp/yt-dlp/archive/%{version}/%{name}-%{version}.tar.gz
+Source:         https://pypi.python.org/packages/source/y/yt-dlp/%{name}-%{version}.tar.gz
 
-BuildRequires:  git
-BuildRequires:  make
-#BuildRequires:  pandoc
-#BuildRequires:  python3dist(pypandoc)
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pip)
@@ -31,7 +35,13 @@ Requires:       python3dist(pycryptodomex)
 Requires:       python3dist(pycryptodome)
 Requires:       python3dist(websockets)
 Requires:       python3dist(keyring)
+Recommends:     aria2
+Recommends:     curl
+Recommends:     wget
 BuildArch:      noarch
+
+Provides:       python-yt-dlp
+Provides:       python3-yt-dlp
 
 %description
 yt-dlp is a small command-line program to retrieve videos from
@@ -73,19 +83,24 @@ ZSH command line completion support for %name.
 %autosetup -p1
 
 %build
-#rm -f yt-dlp
-#make_build
 %py_build
 
 %install
-#make_install PREFIX="%_prefix" MANDIR="%_mandir"
 %py_install
+
+# fix from ROSA
+# installed as %%doc into standard location
+unlink %{buildroot}%{_datadir}/doc/yt_dlp/README.txt
+rmdir %{buildroot}%{_datadir}/doc/yt_dlp
+rmdir %{buildroot}%{_datadir}/doc
 
 %files
 %license LICENSE
 %doc README.txt
 %_bindir/%name
-#_mandir/man1/%name.1%{?ext_man}
+%{python_sitelib}/yt_dlp
+%{python_sitelib}/yt_dlp-*-py%{py_ver}.egg-info
+%{_mandir}/man1/yt-dlp.1.*
 
 %files bash-completion
 %_datadir/bash-completion/
