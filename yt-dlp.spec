@@ -100,7 +100,7 @@ rmdir %{buildroot}%{_datadir}/doc
 %_bindir/%name
 %{python_sitelib}/yt_dlp
 %{python_sitelib}/yt_dlp-*-py%{py_ver}.egg-info
-%{python_sitelib}/devscripts/
+#{python_sitelib}/devscripts/
 %{_mandir}/man1/yt-dlp.1.*
 
 %files bash-completion
