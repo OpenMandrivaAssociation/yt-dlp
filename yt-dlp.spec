@@ -7,7 +7,7 @@
 # But until some aplication still require youtube-dl, please don't replace it with yt-dlp or don't obsolete it.
 
 Name:           yt-dlp
-Version:        2022.10.4
+Version:        2022.11.11
 Release:        1
 Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
