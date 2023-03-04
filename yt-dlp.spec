@@ -88,13 +88,13 @@ ZSH command line completion support for %name.
 
 # fix from ROSA
 # installed as %%doc into standard location
-unlink %{buildroot}%{_datadir}/doc/yt_dlp/README.txt
+unlink %{buildroot}%{_datadir}/doc/yt_dlp/README*
 rmdir %{buildroot}%{_datadir}/doc/yt_dlp
 rmdir %{buildroot}%{_datadir}/doc
 
 %files
 %license LICENSE
-%doc README.txt
+%doc README*
 %_bindir/%name
 %{python_sitelib}/yt_dlp
 %{python_sitelib}/yt_dlp-%{version}.dist-info
