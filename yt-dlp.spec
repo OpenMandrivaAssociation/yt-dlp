@@ -89,8 +89,8 @@ ZSH command line completion support for %name.
 # fix from ROSA
 # installed as %%doc into standard location
 #unlink %{buildroot}%{_datadir}/doc/yt_dlp/README*
-rmdir %{buildroot}%{_datadir}/doc/yt_dlp
-rmdir %{buildroot}%{_datadir}/doc
+#rmdir %{buildroot}%{_datadir}/doc/yt_dlp
+#rmdir %{buildroot}%{_datadir}/doc
 
 %files
 %license LICENSE
