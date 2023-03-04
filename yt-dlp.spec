@@ -102,7 +102,7 @@ ZSH command line completion support for %name.
 #{_mandir}/man1/yt-dlp.1.*
 
 %files bash-completion
-%_datadir/bash-completion/
+#_datadir/bash-completion/
 
 %files fish-completion
 %_datadir/fish/
