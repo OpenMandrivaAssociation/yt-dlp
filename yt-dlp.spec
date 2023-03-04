@@ -3,11 +3,9 @@
 # Pandoc is not available in Cooker and resurrection of it is hard and cause importing and fixing a lot of heavy packages like ghc.
 # So let's skip it by use PyPi sources and force use py_build and py_install instead recommended by upstream makeinstall.
 
-# Package is a fork of youtube-dl but with more features and fixes, also looks like youtube-dl development stop in summer 2021.
-# But until some aplication still require youtube-dl, please don't replace it with yt-dlp or don't obsolete it.
 
 Name:           yt-dlp
-Version:        2023.2.17
+Version:        2023.3.3
 Release:        1
 Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
