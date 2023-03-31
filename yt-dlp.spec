@@ -6,7 +6,7 @@
 
 Name:           yt-dlp
 Version:        2023.3.3
-Release:        1
+Release:        2
 Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
