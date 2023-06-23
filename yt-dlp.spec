@@ -95,14 +95,15 @@ ZSH command line completion support for %name.
 %files
 %license LICENSE
 %doc README*
-%_bindir/%name
+%doc %{_datadir}/doc/yt_dlp/README.txt
+%{_bindir}/%name
 %{python_sitelib}/yt_dlp
 %{python_sitelib}/yt_dlp-%{version}.dist-info
 #{python_sitelib}/devscripts/
-#{_mandir}/man1/yt-dlp.1.*
+%{_mandir}/man1/yt-dlp.1.*
 
 %files bash-completion
-#_datadir/bash-completion/
+%{_datadir}/bash-completion/
 
 %files fish-completion
 %_datadir/fish/
