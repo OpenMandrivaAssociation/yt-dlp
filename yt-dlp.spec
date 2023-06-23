@@ -5,8 +5,8 @@
 
 
 Name:           yt-dlp
-Version:        2023.3.3
-Release:        2
+Version:        2023.6.22
+Release:        1
 Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
@@ -95,14 +95,15 @@ ZSH command line completion support for %name.
 %files
 %license LICENSE
 %doc README*
-%_bindir/%name
+%doc %{_datadir}/doc/yt_dlp/README.txt
+%{_bindir}/%name
 %{python_sitelib}/yt_dlp
 %{python_sitelib}/yt_dlp-%{version}.dist-info
 #{python_sitelib}/devscripts/
-#{_mandir}/man1/yt-dlp.1.*
+%{_mandir}/man1/yt-dlp.1.*
 
 %files bash-completion
-#_datadir/bash-completion/
+%{_datadir}/bash-completion/
 
 %files fish-completion
 %_datadir/fish/
