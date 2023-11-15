@@ -12,6 +12,7 @@ License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
 URL:            https://github.com/yt-dlp/yt-dlp
 Source:         https://pypi.python.org/packages/source/y/yt-dlp/%{name}-%{version}.tar.gz
+Patch0:         releax-deps.patch
 
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
