@@ -12,7 +12,6 @@ License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
 URL:            https://github.com/yt-dlp/yt-dlp
 Source:         https://pypi.python.org/packages/source/y/yt-dlp/%{name}-%{version}.tar.gz
-Patch0:         releax-deps.patch
 
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
@@ -29,11 +28,11 @@ Requires:       mpv
 #Requires:       phantomjs
 # Deprecated but also not available in Cooker
 #Requires:       sponskrub
-Requires:       python3dist(mutagen)
-Requires:       python3dist(pycryptodomex)
-Requires:       python3dist(pycryptodome)
-Requires:       python3dist(websockets)
-Requires:       python3dist(keyring)
+Requires:       python%{pyver}dist(mutagen)
+Requires:       python%{pyver}dist(pycryptodomex)
+Requires:       python%{pyver}dist(pycryptodome)
+Requires:       python%{pyver}dist(websockets)
+Requires:       python%{pyver}dist(keyring)
 Recommends:     aria2
 Recommends:     curl
 Recommends:     wget
