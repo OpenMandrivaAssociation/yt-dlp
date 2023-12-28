@@ -6,7 +6,7 @@
 
 Name:           yt-dlp
 Version:        2023.11.16
-Release:        1
+Release:        2
 Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
@@ -22,8 +22,7 @@ Requires:       ffmpeg
 Requires:       python
 Requires:       atomicparsley
 Requires:       rtmpdump
-Requires:       mplayer
-Requires:       mpv
+Requires:       (mpv or mplayer)
 # Not available yet in Cooker
 #Requires:       phantomjs
 # Deprecated but also not available in Cooker
