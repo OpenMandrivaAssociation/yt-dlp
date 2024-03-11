@@ -11,7 +11,7 @@ Summary:        A tool for downloading from video sites for offline watching
 License:        CC-BY-SA-3.0 and Unlicensed
 Group:          Productivity/Video/Networking/Web/Utilities
 URL:            https://github.com/yt-dlp/yt-dlp
-Source:         https://pypi.python.org/packages/source/y/yt-dlp/%{name}-%{version}.tar.gz
+Source:         https://pypi.python.org/packages/source/y/yt-dlp/%{name}_%{version}.tar.gz
 
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
@@ -77,7 +77,7 @@ BuildArch:      noarch
 ZSH command line completion support for %name.
 
 %prep
-%autosetup -p1
+%autosetup -%{name}_%{version} -p1
 
 %build
 %py_build
