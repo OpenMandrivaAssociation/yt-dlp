@@ -16,6 +16,7 @@ Source:         https://pypi.python.org/packages/source/y/yt-dlp/yt_dlp-%{versio
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(pip)
+BuildRequires:  python3dist(hatchling)
 BuildRequires:  zip
 
 Requires:       ffmpeg
