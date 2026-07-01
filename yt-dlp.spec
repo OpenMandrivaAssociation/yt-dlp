@@ -5,13 +5,13 @@
 
 
 Name:		yt-dlp
-Version:	2026.3.17
+Version:	2026.6.9
 Release:	1
 Summary:	A tool for downloading from video sites for offline watching
 License:	Unlicense
 Group:		Productivity/Video/Networking/Web/Utilities
 URL:		https://github.com/yt-dlp/yt-dlp
-Source:		https://pypi.python.org/packages/source/y/yt-dlp/yt_dlp-%{version}.tar.gz
+Source0:		https://pypi.python.org/packages/source/y/yt-dlp/yt_dlp-%{version}.tar.gz
 
 BuildSystem:	python
 BuildArch:	noarch
@@ -41,6 +41,12 @@ Requires:	python%{pyver}dist(keyring)
 Recommends:	aria2
 Recommends:	curl
 Recommends:	wget
+
+# External JavaScript for yt-dlp supporting many runtimes.
+# It can work with quickjs or quickjs-ng or deno or bun or nodejs.
+# Recommended is deno but it is havy and writen in rust. Hard to package it.
+# Pick for now quickjs.
+Requires:	yt-dlp-ejs
 Recommends:	quickjs
 
 Provides:	python-yt-dlp = %{version}-%{release}
