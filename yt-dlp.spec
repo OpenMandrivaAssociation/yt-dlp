@@ -6,7 +6,7 @@
 
 Name:		yt-dlp
 Version:	2026.8.19
-Release:	1
+Release:	2
 Summary:	A tool for downloading from video sites for offline watching
 License:	Unlicense
 Group:		Productivity/Video/Networking/Web/Utilities
@@ -15,7 +15,7 @@ Source0:		https://pypi.python.org/packages/source/y/yt-dlp/yt_dlp-%{version}.tar
 
 BuildSystem:	python
 BuildArch:	noarch
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(hatchling)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
